@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <div className="w-full bg-slate-600 mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <div><div className="w-full ">
+      <div><div className="w-full pt-6">
 
     <form>   
       <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
