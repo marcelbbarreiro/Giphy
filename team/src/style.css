@@ -1,8 +1,4 @@
-body {
-  background-color: rgb(209, 204, 204);
-}
 .templateContainer {
-  margin: 5% 0;
 }
 .templateContainer > .searchInput_Container {
   display: flex;

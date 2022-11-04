@@ -6,11 +6,13 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <>
-    <div className="templateContainer">
-      <div className="searchInput_Container">
-      <input id="searchInput" type="text" placeholder="Search here..." onChange={(event) => {
+    <div className="bg-slate-600 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div><div className="searchInput_Container "></div>
+        <input id="searchInput" type="text" placeholder="Search here..." onChange={(event) => {
             setSearchTerm(event.target.value);
           }} />
+      </div>
+    <div className="templateContainer  ">
       <div className="template_Container">
       {
             data 
@@ -32,15 +34,9 @@ function App() {
               })
           }
 
-
-
-      </div>
-
-
-
       </div>
     </div>
-
+    </div>
     </>
   );
 }
