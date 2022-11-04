@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import '../../styles/style.css';
 import { MagnifyingGlassIcon, UsersIcon } from '@heroicons/react/20/solid'
 import useFirestore from "../../hooks/useFirestore";
+import toast,{ Toaster } from 'react-hot-toast';
 
 
 
@@ -9,7 +10,7 @@ import useFirestore from "../../hooks/useFirestore";
 
 function Home() {
 const [searchTerm, setSearchTerm] = useState("");
-const {getGifsData} = useFirestore();
+const {getGifsData,deleteGifData} = useFirestore();
 const [memeData, setmemeData] = useState([]);
 
 useEffect (() => {
@@ -17,6 +18,16 @@ useEffect (() => {
     setmemeData (data);
     })
 },[])
+
+const deleteGif = (src,title) => {
+  deleteGifData("marcelbarreiro@gmail.com", title, src)
+  setTimeout(()=>{
+    getGifsData('marcelbarreiro@gmail.com').then((data) => {
+      setmemeData (data);
+    })
+    toast.success("Meme deleted succesfully")
+  },1000)
+}
 
   return (
 
@@ -66,12 +77,13 @@ useEffect (() => {
             //       return val;
             //     }
             //   })
-              memeData.map((val) => {
+              memeData.map((val,index) => {
                 return(
-                  <div className="template" key={val.id}>
+                  <div className="template" key={index}>
                       <img src={val.src} alt="" />
                       <h3>{val.title}</h3>
                       {/* <p className="price">${val.price}</p> */}
+                      <button onClick={()=>deleteGif(val.src,val.title)}>Delete</button>
                   </div> 
                 )
               })
@@ -85,7 +97,7 @@ useEffect (() => {
 
 
 
-
+    <Toaster position="top-center" reverseOrder={false} />
     </div>
   )
 }
