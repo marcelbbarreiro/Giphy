@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import '../../styles/style.css';
-import data from "../../data/TemplateData.json";
 import { MagnifyingGlassIcon, UsersIcon } from '@heroicons/react/20/solid'
+import useFirestore from "../../hooks/useFirestore";
 
 
 
@@ -9,7 +9,17 @@ import { MagnifyingGlassIcon, UsersIcon } from '@heroicons/react/20/solid'
 
 function Home() {
 const [searchTerm, setSearchTerm] = useState("");
+const {getGifsData} = useFirestore();
+const [memeData, setmemeData] = useState([]);
+
+useEffect (() => {
+    getGifsData('marcelbarreiro@gmail.com').then((data) => {
+    setmemeData (data);
+    })
+},[])
+
   return (
+
     <div>
 <div className="w-full bg-slate-600 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div><div className="w-full pt-6">
@@ -48,20 +58,20 @@ const [searchTerm, setSearchTerm] = useState("");
     <div className="templateContainer  ">
       <div className="template_Container">
       {
-            data 
-              .filter((val) => {
-                if(searchTerm == ""){
-                  return val;
-                }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
-                  return val;
-                }
-              })
-              .map((val) => {
+            // data 
+            //   .filter((val) => {
+            //     if(searchTerm == ""){
+            //       return val;
+            //     }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+            //       return val;
+            //     }
+            //   })
+              memeData.map((val) => {
                 return(
                   <div className="template" key={val.id}>
-                      <img src={val.image} alt="" />
+                      <img src={val.src} alt="" />
                       <h3>{val.title}</h3>
-                      <p className="price">${val.price}</p>
+                      {/* <p className="price">${val.price}</p> */}
                   </div> 
                 )
               })
