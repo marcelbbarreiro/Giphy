@@ -14,10 +14,25 @@ const {getGifsData,deleteGifData} = useFirestore();
 const [memeData, setmemeData] = useState([]);
 
 useEffect (() => {
-    getGifsData('marcelbarreiro@gmail.com').then((data) => {
-    setmemeData (data);
-    })
-},[])
+    if (!searchTerm) { 
+        getGifsData('marcelbarreiro@gmail.com').then((data) => {
+        setmemeData (data);
+        })
+    }
+   
+},[searchTerm])
+
+
+const handleSearch = (searchTerm)=> {
+    setSearchTerm(searchTerm);
+    const searchData = memeData.filter((val) => {
+        if(searchTerm == ""){
+          return;
+        }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
+          return val;
+        }})
+        setmemeData (searchData);
+}
 
 const deleteGif = (src,title) => {
   deleteGifData("marcelbarreiro@gmail.com", title, src)
@@ -51,7 +66,7 @@ const deleteGif = (src,title) => {
             className="block w-full rounded-none rounded-l-md border-gray-300 pl-10 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
             placeholder="John Smith"
             onChange={(event) => {
-              setSearchTerm(event.target.value);
+              handleSearch(event.target.value);
             }} 
           />
         </div>
@@ -69,14 +84,7 @@ const deleteGif = (src,title) => {
     <div className="templateContainer  ">
       <div className="template_Container">
       {
-            // data 
-            //   .filter((val) => {
-            //     if(searchTerm == ""){
-            //       return val;
-            //     }else if(val.title.toLowerCase().includes(searchTerm.toLowerCase())){
-            //       return val;
-            //     }
-            //   })
+
               memeData.map((val,index) => {
                 return(
                   <div className="template" key={index}>
