@@ -1,16 +1,3 @@
-.templateContainer {
-}
-.templateContainer > .searchInput_Container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-.templateContainer > .searchInput_Container input {
-  width: 50%;
-  padding: 10px;
-  outline: none;
-}
 .templateContainer .template_Container {
   display: flex;
   align-items: center;
