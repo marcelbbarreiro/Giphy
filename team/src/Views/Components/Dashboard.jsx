@@ -5,7 +5,7 @@ import {Outlet} from "react-router-dom"
 
 function Dashboard() {
   return (
-    <div>
+    <div className='bg-slate-50'>
         <NavBar />
         <Outlet />
         <Footer />

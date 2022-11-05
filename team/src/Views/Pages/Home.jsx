@@ -47,7 +47,7 @@ const deleteGif = (src,title) => {
   return (
 
     <div>
-<div className="w-full bg-slate-600 mx-auto max-w-7xl sm:px-6 lg:px-8">
+<div className="w-full bg-slate-50 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div><div className="w-full pt-6">
 
       <div>
@@ -64,7 +64,7 @@ const deleteGif = (src,title) => {
             name="search"
             id="search"
             className="block w-full rounded-none rounded-l-md border-gray-300 pl-10 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-            placeholder="John Smith"
+            placeholder="Student name"
             onChange={(event) => {
               handleSearch(event.target.value);
             }} 
