@@ -87,11 +87,11 @@ const deleteGif = (src,title) => {
 
               memeData.map((val,index) => {
                 return(
-                  <div className=" " key={index}>
+                  <div className="drop-shadow-xl " key={index}>
                       <img src={val.src} alt="" />
-                      <h3>{val.title}</h3>
+                      <h3 className="text-center text-white bg-[#2d0909] py-1">{val.title}</h3>
                       {/* <p className="price">${val.price}</p> */}
-                      <button onClick={()=>deleteGif(val.src,val.title)}>Delete</button>
+                      <button className="drop-shadow-xl w-full bg-red-800 text-white py-1 rounded-b-lg hover:bg-red-900 hover:text-white" onClick={()=>deleteGif(val.src,val.title)}>Delete</button>
                   </div> 
                 )
               })

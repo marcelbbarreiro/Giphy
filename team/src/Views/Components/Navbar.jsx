@@ -49,13 +49,13 @@ const NavBar = () => {
                 </div>
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto lg:hidden"
+                    className="block h-9 w-auto lg:hidden"
                     src="https://wordpress-797010-2726389.cloudwaysapps.com/wp-content/uploads/2022/11/Logo-AIT-Red600x-8.png"
                     alt="Assembler Logo"
                     
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
+                    className="hidden h-9 w-auto lg:block"
                     src="https://wordpress-797010-2726389.cloudwaysapps.com/wp-content/uploads/2022/11/Logo-AIT-Red600x-8.png"
                     alt="Assembler Logo"
                     

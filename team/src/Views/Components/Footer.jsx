@@ -93,7 +93,7 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        <p className="mt-8 text-center text-base text-gray-400">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+        <p className="mt-8 text-center text-base text-gray-400">&copy; 2022 Assembler Memes, Inc. All rights reserved.</p>
       </div>
     </footer>
   )
