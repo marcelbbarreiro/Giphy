@@ -81,13 +81,13 @@ const deleteGif = (src,title) => {
     </div>
       </div>
       </div>
-    <div className="templateContainer  ">
-      <div className="template_Container">
+    <div className=" ">
+      <div className=" mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {
 
               memeData.map((val,index) => {
                 return(
-                  <div className="template" key={index}>
+                  <div className=" " key={index}>
                       <img src={val.src} alt="" />
                       <h3>{val.title}</h3>
                       {/* <p className="price">${val.price}</p> */}
