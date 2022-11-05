@@ -3,12 +3,11 @@ import React from 'react'
 const Footer = () => {
     const navigation = {
         main: [
-          { name: 'About', href: '#' },
-          { name: 'Blog', href: '#' },
-          { name: 'Jobs', href: '#' },
-          { name: 'Press', href: '#' },
-          { name: 'Accessibility', href: '#' },
-          { name: 'Partners', href: '#' },
+          { name: 'Home', href: '/' },
+          { name: 'About', href: '/About' },
+          { name: 'Upload', href: '/Upload' },
+          { name: 'Contact', href: '/Contact' },
+
         ],
         social: [
           {
