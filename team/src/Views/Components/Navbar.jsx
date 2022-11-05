@@ -30,7 +30,7 @@ const NavBar = () => {
   
   return (
     <div>
-<Disclosure as="nav" className="bg-gray-800">
+<Disclosure as="nav" className="bg-slate-50">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -50,13 +50,13 @@ const NavBar = () => {
                 <div className="flex flex-shrink-0 items-center">
                   <img
                     className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                    src="https://wordpress-797010-2726389.cloudwaysapps.com/wp-content/uploads/2022/11/Logo-AIT-Red600x-8.png"
+                    alt="Assembler Logo"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                    src="https://wordpress-797010-2726389.cloudwaysapps.com/wp-content/uploads/2022/11/Logo-AIT-Red600x-8.png"
+                    alt="Assembler Logo"
                   />
                 </div>
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
@@ -65,7 +65,7 @@ const NavBar = () => {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                        item.current ? 'bg-red-900 text-white' : 'text-gray-500 hover:bg-red-900 hover:text-white',
                         'px-3 py-2 rounded-md text-sm font-medium'
                       )}
                       aria-current={item.current ? 'page' : undefined}
@@ -79,7 +79,7 @@ const NavBar = () => {
                 <div className="flex-shrink-0">
                   <button
                     type="button"
-                    className="relative inline-flex items-center rounded-md border border-transparent bg-indigo-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="relative inline-flex items-center rounded-md border border-transparent bg-rose-900 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <PlusIcon className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
 
@@ -90,7 +90,7 @@ const NavBar = () => {
                 <div className="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center">
                   <button
                     type="button"
-                    className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                    className="rounded-full bg-red-900 p-1 text-stone-50 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-red-900"
                   >
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
